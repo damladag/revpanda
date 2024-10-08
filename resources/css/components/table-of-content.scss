@@ -1,0 +1,72 @@
+.rvp-toc {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  margin-bottom: $container-padding*6;
+  overflow: hidden;
+
+  @include media-breakpoint(lg) {
+    margin-bottom: $container-padding*4;
+  }
+
+  &-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(12px);
+    gap: rem(12px);
+    color: $primary-color;
+    background-color: $background-color;
+
+    @include media-breakpoint(lg) {
+      justify-content: space-between;
+    }
+  }
+
+  &-content {
+    border-top: 1px solid $primary-color;
+    padding: 0 rem(25px);
+    display: none;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+
+      li {
+        padding: $container-padding*2 0;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $container-padding;
+
+        @include hover-active-focus {
+          background-color: $border-color;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: $black-color;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-arrow {
+    transition: all 0.5s ease;
+    transform: rotate(0deg);
+
+    &.rotated {
+      transform: rotate(-180deg);
+    }
+  }
+}

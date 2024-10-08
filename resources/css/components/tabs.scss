@@ -1,0 +1,89 @@
+.rvp-tabs {
+  display: flex;
+  gap: rem(10px);
+  justify-content: center;
+  margin-bottom: $container-padding;
+
+  @include media-breakpoint(lg) {
+    border: 1px solid $primary-color;
+    border-radius: 0 0 5px 5px;
+    padding: 0 rem(25px);
+    display: none;
+  }
+
+  .rvp-tab {
+    padding: rem(14px) $container-padding*4;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    color: $primary-color;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: rem(10px);
+    cursor: pointer;
+
+    @include media-breakpoint(lg) {
+      padding: rem(12px) 0;
+      border: none;
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $container-padding;
+      font-weight: 500;
+      border-radius: 0;
+    }
+
+    @include hover-active-focus {
+      background-color: $primary-color;
+      color: $white-color;
+
+      svg path {
+        fill: $white-color;
+      }
+    }
+
+    &.active-tab {
+      background-color: $primary-color;
+      color: $white-color;
+
+      svg path {
+        fill: $white-color;
+      }
+    }
+  }
+
+  &-sort-by {
+    display: none;
+
+    @include media-breakpoint(lg) {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: rem(12px);
+      gap: rem(12px);
+      color: $primary-color;
+      background-color: $background-color;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+
+      .rvp-tabs-arrow {
+        position: absolute;
+        right: 12px;
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+      }
+
+      &.open {
+        border-radius: 5px 5px 0 0;
+        border-bottom: 0;
+
+        .rvp-tabs-arrow {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}

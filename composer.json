@@ -1,0 +1,16 @@
+{
+    "name": "rvp/revpanda-theme",
+    "description": "Theme Repository for Revpanda Task",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Damla Dağ",
+            "email": "damladag@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RVP\\": "inc/"
+        }
+    }
+}

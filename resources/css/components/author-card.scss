@@ -1,0 +1,42 @@
+.rvp-author {
+  background: $background-color;
+  padding: $container-padding*2;
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+  margin-bottom: $container-padding*5;
+
+  &-details {
+    display: flex;
+    align-items: center;
+    gap: rem(9px);
+
+    img {
+      border-radius: 2px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+  }
+
+  &-name,
+  &-publish-date,
+  &-description {
+    color: $black-color;
+
+    span {
+      color: $text-color;
+    }
+  }
+
+  &-description {
+    font-weight: 400;
+  }
+
+  @include media-breakpoint(md) {
+    margin: 0 -16px $container-padding*4;
+  }
+}

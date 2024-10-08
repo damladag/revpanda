@@ -1,0 +1,48 @@
+.rvp-hero {
+  background: url("../images/hero-bg.png") no-repeat;
+  background-size: cover;
+  height: rem(400px);
+  position: relative;
+  margin-bottom: $container-padding*5;
+
+  @include media-breakpoint(md) {
+    height: rem(200px);
+    margin-bottom: $container-padding*4;
+  }
+
+  &-content {
+    position: absolute;
+    bottom: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: $container-padding*4;
+
+    @include media-breakpoint(md) {
+      width: 100%;
+      gap: $container-padding;
+      bottom: 34px;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12px);
+
+    a {
+      text-decoration: none;
+    }
+
+    @include media-breakpoint(md) {
+      align-items: flex-start;
+      padding: 0 $container-padding*2;
+    }
+  }
+
+  .rvp-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}

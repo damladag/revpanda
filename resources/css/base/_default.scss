@@ -1,0 +1,27 @@
+body {
+  font-family: 'Noto Sans JP', serif;
+  font-feature-settings: 'ss14' on, 'cv08' on, 'cv07' on, 'ss02' on, 'cv04' on, 'ss01' on, 'cv03' on, 'cv02' on, 'ss04' on, 'cv06' on, 'cv01' on;
+  margin: 0;
+
+  main {
+    margin-bottom: 80px;
+  }
+}
+.rvp-container {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @include media-breakpoint(xl) {
+    max-width: 944px;
+  }
+  @include media-breakpoint(lg) {
+    max-width: 688px;
+  }
+  @include media-breakpoint(md) {
+    max-width: 560px;
+    padding: 0 $container-padding*5;
+  }
+  @include media-breakpoint(sm) {
+    padding: 0 $container-padding*2;
+  }
+}

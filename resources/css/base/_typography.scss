@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Black.ttf") format("truetype");
+  font-weight: 900; // Black (En kalın)
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: 700; // Bold
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-ExtraBold.ttf") format("truetype");
+  font-weight: 800; // Extra Bold
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-ExtraLight.ttf") format("truetype");
+  font-weight: 200; // Extra Light
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Light.ttf") format("truetype");
+  font-weight: 300; // Light
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Medium.ttf") format("truetype");
+  font-weight: 500; // Medium
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Regular.ttf") format("truetype");
+  font-weight: 400; // Regular (Normal)
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-SemiBold.ttf") format("truetype");
+  font-weight: 600; // Semi Bold
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Thin.ttf") format("truetype");
+  font-weight: 100; // Thin (En ince)
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h1, .rvp-h1 {
+  font-size: rem(32px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: $white-color;
+  margin: 0;
+
+  @include media-breakpoint(md) {
+    font-size: rem(20px);
+  }
+}
+
+h2, .rvp-h2 {
+  font-size: rem(24px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: $white-color;
+
+  @include media-breakpoint(md) {
+    font-size: rem(22px);
+  }
+}
+
+h3, .rvp-h3 {
+  font-size: rem(20px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: $white-color;
+}
+
+h4, .rvp-h4 {
+  font-size: rem(16px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: $white-color;
+  margin: 0;
+
+  @include media-breakpoint(md) {
+    font-size: rem(14px);
+  }
+}
+
+.rvp-text {
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: $white-color;
+}
+
+.rvp-text-small {
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: 1.7;
+  color: $black-color;
+}
+
+.rvp-text-large {
+  font-size: rem(18px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: $black-color;
+}
+
+

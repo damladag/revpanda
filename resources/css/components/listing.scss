@@ -1,0 +1,233 @@
+.rvp-listing {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12px);
+  margin-top: $container-padding*2;
+  counter-reset: section;
+
+  &-item {
+    display: flex;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include media-breakpoint(lg) {
+      flex-wrap: wrap;
+    }
+
+    &:before {
+      counter-increment: section;
+      content: "#" counter(section) " ";
+      padding: rem(18px);
+      background-color: $third-color;
+      color: $white-color;
+      font-size: rem(20px);
+      line-height: 1.4;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint(md) {
+        padding: $container-padding;
+        font-size: rem(16px);
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include media-breakpoint(lg) {
+       flex: 1;
+      }
+    }
+  }
+
+  &-info {
+    flex-direction: column;
+    gap: rem(10px);
+    padding: rem(20px);
+    background-color: $secondary-color;
+
+    img {
+      border-radius: 4px;
+      width: rem(120px);
+      height: auto;
+    }
+
+    @include media-breakpoint(md) {
+      padding: rem(6px);
+
+      img {
+        width: rem(86px);
+      }
+    }
+  }
+
+  &-title {
+    text-align: center;
+  }
+
+  &-details {
+    padding: rem(20px) rem(30px);
+    display: flex;
+    gap: rem(20px);
+    background-color: $primary-color;
+
+    @include media-breakpoint(md) {
+      gap: rem(10px);
+      padding: rem(20px);
+    }
+  }
+
+  &-bonus,
+  &-free-spins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: rem(4px);
+    width: rem(120px);
+    background: $box-linear-gradient;
+
+    @include media-breakpoint(md) {
+      width: rem(78px);
+      font-size: rem(14px);
+      font-weight: 400;
+    }
+  }
+
+  &-free-spins span{
+    display: block;
+  }
+
+  &-right {
+    background-color: $background-color;
+    justify-content: space-between !important;
+    width: 100%;
+
+    @include media-breakpoint(lg) {
+      justify-content: space-around !important;
+      padding: rem(10px) rem(12px);
+    }
+
+    @include media-breakpoint(md) {
+      flex-direction: column;
+      gap: rem(12px);
+    }
+  }
+
+  &-rating {
+    padding-left: rem(60px);
+    font-weight: 700;
+    color: $black-color;
+    flex-direction: column;
+    justify-content: center;
+    gap: $container-padding;
+
+    @include media-breakpoint(xl) {
+      padding-left: $container-padding*3;
+    }
+
+    @include media-breakpoint(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(12px);
+      padding: 0;
+      font-size: rem(16px);
+    }
+
+    &-stars {
+      display: flex;
+      align-items: center;
+      gap: $container-padding;
+    }
+
+    .rating-stars {
+      position: relative;
+      display: inline-block;
+      line-height: rem(24px);
+    }
+
+    .stars-empty,
+    .stars-filled {
+      color: $star-color;
+    }
+
+    .star {
+      font-size: rem(24px);
+    }
+
+    .stars-filled {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      pointer-events: none;
+    }
+  }
+
+  &-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(12px);
+    padding-right: rem(45px);
+
+    @include media-breakpoint(xl) {
+      padding-right: $container-padding*3;
+    }
+    @include media-breakpoint(md) {
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
+  &-button {
+    width: rem(218px);
+    background: $button-linear-gradient;
+    padding: rem(10px);
+    text-align: center;
+    color: $black-color;
+    border-radius: 4px;
+    text-decoration: none;
+
+    @include media-breakpoint(xl) {
+      width: 100%;
+    }
+
+    @include media-breakpoint(md) {
+     padding: rem(10px) 0;
+    }
+  }
+
+  &-read-link {
+    text-decoration: underline;
+
+    @include hover-active-focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.rvp-show-more {
+  cursor: pointer;
+  padding: rem(13px) rem(38.5px);
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  color: $primary-color;
+  font-weight: 700;
+  width: fit-content;
+  margin: $container-padding*3 auto $container-padding*5;
+
+  @include media-breakpoint(md) {
+    font-size: rem(14px);
+    padding: rem(10px) $container-padding*4;
+  }
+}
